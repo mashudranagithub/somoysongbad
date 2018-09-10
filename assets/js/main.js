@@ -81,6 +81,25 @@ $(document).ready(function(){
         }
     })
     
+    $('.big_news_image').owlCarousel({
+        loop:true,
+        margin:15,
+        nav:true,
+        navText:['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        autoplay:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+    
     
     //main menu active effect
 //    $(document).ready(function () {
