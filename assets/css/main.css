@@ -94,6 +94,51 @@ a.btn-more:hover {
     padding-bottom:45px!important;
 }
 
+span.bar,
+.crossbar1,
+.crossbar2{
+    width: 35px;
+    height: 4px;
+    background-color: #29abe2;
+    margin: 6px 0;
+    display: block;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.openMenu {
+    float: right;
+    padding: 20px 20px 0;
+}
+
+.closeMenu {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    padding-left:100px
+}
+
+
+.openMenu,
+.closeMenu {
+    display: none;
+}
+
+
+.crossbar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(0px, 6px);
+}
+
+.crossbar2 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-1px, -7.5px);
+}
+
+.crossbar1, .crossbar2 {
+    background-color: #fff;
+}
+
 /********************* Custom CSS ************************/
 
 
@@ -2105,12 +2150,15 @@ a.btn_more {
 
 
 @media screen and (max-width: 767px) {
-    .temperature_date, 
-    .top_menu, 
-    .social_menu{
+
+    .top_menu{
         width:100%;
         padding-left: 60px;
         /*text-align: center;*/
+    }
+
+    .temperature_date, .social_menu {
+        display:  none;
     }
 
     .for_add img{
@@ -2118,7 +2166,7 @@ a.btn_more {
     }
 
     .logo {
-        text-align:  center;
+        /*text-align:  center;*/
     }
 
     .logo a img {
@@ -2135,7 +2183,70 @@ a.btn_more {
     }
 
     .main_mega_menu{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -80px;
+        overflow-x: hidden;
+        background-color: #3c4f58!important;
+    }
+
+    .main_mega_menu ul li {
+        display:  block;
+        text-align:  right;
+        text-decoration: none;
+    }
+
+    .main_mega_menu ul li {
+        padding-right: 20px;
+        line-height:  35px;
+    }
+
+    .main_mega_menu ul {
+        padding-top: 25px;
+    }
+
+    .main_mega_menu ul li a {
+        padding: 12px 25px;
+    }
+
+    .main_mega_menu ul li {
+        margin-bottom: 2px;
+        padding-right: 0;
+    }
+
+    .openMenu,
+    .closeMenu {
+        display: block;
+        cursor:pointer;
+    }
+
+    .main_mega_menu ul li:active, 
+    .main_mega_menu ul li:visited, 
+    .main_mega_menu ul li:focus, 
+    .main_mega_menu ul li:focus-within{
+        background:transparent!important;
+    }
+
+    .mega_menu a i.fa{
         display: none;
+    }
+
+
+
+
+    .main_mega_menu ul li:hover {
+        background: transparent;
+    }
+
+    #Category_layout_content .big_featured_news a {
+        height: auto;
+    }
+
+    .feature_news_titles {
+        padding: 15px 15px 0px;
     }
 
     #Latest_news_slide span#main {
@@ -2293,5 +2404,56 @@ a.btn_more {
         padding: 5px 10px;
         margin-top: 5px;
     }
+
+    .small_video_detail{
+        width:60%;
+    }
+
+    .video_link a h2{
+        font-size:20px;
+    }
+
+    .big, .big img {
+         height: auto; 
+    }
+
+    .small {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .single_comment .single_comment {
+        background: rgba(238, 238, 238, 1);
+        display: block;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .single_comment .single_comment .single_comment {
+        background: #ddd;
+        display: block;
+    }
+
+    .single_comment .single_comment .single_comment .comment{
+        width:100%;
+    }
+
+    .commentator{
+    float: none;
+    /* text-align: center; */
+    margin-bottom: 10px;
+    }
+
+    .comment{
+        float:none;
+        width:100%;
+    }
+
+    .single_content_image img{
+        min-height: auto;
+    }
+
+
 
 }

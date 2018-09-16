@@ -186,12 +186,25 @@ $('#top').click(function(){
             
             
         });
-    
-
-    
-
-    
-    
-    
 });
 
+
+$(document).ready(function(){
+    $(".closeMenu").css({"display": "none"});
+    $(".openMenu").click(function(){
+        $(this).css({"display": "none"});
+        $(".main_mega_menu").css({"width": "200px", "right": "0" , "display": "inline-block", "background": "black", "opacity": "1", "transition": "0.5s"});
+        $(".closeMenu").css({"display": "inline-block"});
+        $(".mega_menu_content").css({"display": "none"});
+        $(".mega_menu a i.fa").css({"display": "none"});
+        $(".search-container").css({"display": "none"});
+    });
+    
+    $(".closeMenu").click(function(){
+        $(this).css({"display": "none"});
+        $(".main_mega_menu").css({"width": "-25px", "opacity": "0"});
+        setTimeout(function(){
+          $(".openMenu").show();
+        }, 500);
+    });
+});
